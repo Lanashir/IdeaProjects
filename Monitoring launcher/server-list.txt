@@ -1,0 +1,12 @@
+log_path = //opt//opt//IBM//WebSphere//profiles//node{wps_server}//logs//OMCluster_member{number}//
+free_space = 1.0
+log_name = SystemErr.log
+log_name = SystemOut.log
+--servers--
+server = lt_mon@k10-fico-db.vtb24.ru:Hs,sytn11:CPU=5
+server = lt_mon@k10-fico-was01.vtb24.ru:Hs,sytn11:CPU=5
+server = lt_mon@k10-fico-was02.vtb24.ru:Hs,sytn11:CPU=5
+server = lt_mon@k10-fico-was03.vtb24.ru:Hs,sytn11:CPU=5
+server = lt_mon@k10-fico-wps01.vtb24.ru:Hs,sytn11:CPU=5
+server = lt_mon@k10-fico-wps02.vtb24.ru:Hs,sytn11:CPU=5
+server = lt_mon@k10-fico-wps03.vtb24.ru:Hs,sytn11:CPU=5

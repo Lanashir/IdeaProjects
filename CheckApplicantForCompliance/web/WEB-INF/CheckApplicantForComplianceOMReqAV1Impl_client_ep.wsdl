@@ -1,0 +1,70 @@
+<wsdl:definitions xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://omentrylibrary/com/om" xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CheckApplicantForComplianceOMReqACS" targetNamespace="http://omentrylibrary/com/om" xmlns:bons0="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://omentrylibrary/com/om">
+			<xsd:import namespace="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary" schemaLocation="InvokeRequestParameters.xsd"/>
+			<xsd:import namespace="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary" schemaLocation="InvokeResponseParameters.xsd"/>
+			<xsd:element name="invokePH3">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="params" nillable="true" type="bons0:InvokeRequestParameters"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="invokePH3Response">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="params" nillable="true" type="bons0:InvokeResponseParameters"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:documentation>
+		<abstractWSDL>
+http://k6-usbs-f-app01.vtb24.ru:8001/soa-infra/services/om/CheckApplicantForComplianceOMReqAV1!1.11813/CheckApplicantForComplianceOMReqAWrapper.wsdl
+		</abstractWSDL>
+	</wsdl:documentation>
+	<wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" wsu:Id="wsaddr_policy">
+		<wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+	</wsp:Policy>
+	<wsdl:message name="invokePH3RequestMsg">
+		<wsdl:part element="tns:invokePH3" name="invokePH3Parameters"/>
+	</wsdl:message>
+	<wsdl:message name="invokePH3ResponseRequestMsg">
+		<wsdl:part element="tns:invokePH3Response" name="invokePH3ResponseParameters"/>
+	</wsdl:message>
+	<wsdl:portType name="CheckApplicantForComplianceOMReqACS">
+		<wsdl:operation name="invokePH3Request">
+			<wsdl:input message="tns:invokePH3RequestMsg" name="invokePH3Request"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="CheckApplicantForComplianceOMReqACSResponse">
+		<wsdl:operation name="CheckApplicantForCompliance">
+			<wsdl:input message="tns:invokePH3ResponseRequestMsg" name="invokePH3Response"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CheckApplicantForComplianceOMReqACSBinding" type="tns:CheckApplicantForComplianceOMReqACS">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wsaddr_policy" wsdl:required="false"/>
+		<wsdl:operation name="invokePH3Request">
+			<soap:operation style="document" soapAction="invokePH3Request"/>
+			<wsdl:input name="invokePH3Request">
+				<soap:body use="literal"/>
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="CheckApplicantForComplianceOMReqACSResponseBinding" type="tns:CheckApplicantForComplianceOMReqACSResponse">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CheckApplicantForCompliance">
+			<soap:operation style="document" soapAction="CheckApplicantForCompliance"/>
+			<wsdl:input name="invokePH3Response">
+				<soap:body use="literal" namespace="http://omentrylibrary/com/om"/>
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CheckApplicantForComplianceOMReqAV1Impl_client_ep">
+		<wsdl:port name="CheckApplicantForComplianceOMReqACS_pt" binding="tns:CheckApplicantForComplianceOMReqACSResponseBinding">
+			<soap:address location="CheckApplicantForComplianceOMReqAV1Impl_client_ep"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

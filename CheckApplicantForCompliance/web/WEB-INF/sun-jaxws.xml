@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+        xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+        version="2.0">
+    <endpoint
+            name="CheckApplicantForComplianceOMReqAV1Impl_client_ep"
+            implementation="omentrylibrary.com.om.CheckApplicantForComplianceOMReqAV1Impl"
+            url-pattern="/CheckApplicantForComplianceOMReqAV1Impl_client_ep"/>
+</endpoints>

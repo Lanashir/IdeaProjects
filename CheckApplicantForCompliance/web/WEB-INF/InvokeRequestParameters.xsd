@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:bons1="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary">
+   <xsd:include schemaLocation="AdditionalParameters.xsd"></xsd:include>
+   <xsd:complexType name="InvokeRequestParameters">
+      <xsd:sequence>
+         <xsd:element minOccurs="0" name="creditApplicationId" type="xsd:string"></xsd:element>
+         <xsd:element minOccurs="0" name="creditApplicationXml" type="xsd:string"></xsd:element>
+         <xsd:element minOccurs="0" name="userContextXml" type="xsd:string"></xsd:element>
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="additionalParams" type="bons1:AdditionalParameters"></xsd:element>
+         <xsd:element minOccurs="0" name="action" type="xsd:string"></xsd:element>
+         <xsd:element minOccurs="0" name="workflowName" type="xsd:string"></xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>

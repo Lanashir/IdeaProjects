@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CheckApplicantForComplianceOMReqACSResponseExport_CheckApplicantForComplianceOMReqACSResponseHttp_Service" targetNamespace="http://omentrylibrary/com/om" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://omentrylibrary/com/om" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:import namespace="http://omentrylibrary/com/om" location="CheckApplicantForComplianceOMReqA.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="CheckApplicantForComplianceOMReqACSResponseExport_CheckApplicantForComplianceOMReqACSResponseHttpBinding" type="this:CheckApplicantForComplianceOMReqACSResponse">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CheckApplicantForCompliance">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="invokePH3Response">
+        <soap:body parts="invokePH3ResponseParameters" use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CheckApplicantForComplianceOMReqACSResponseExport_CheckApplicantForComplianceOMReqACSResponseHttpService">
+    <wsdl:port name="CheckApplicantForComplianceOMReqACSResponseExport_CheckApplicantForComplianceOMReqACSResponseHttpPort" binding="this:CheckApplicantForComplianceOMReqACSResponseExport_CheckApplicantForComplianceOMReqACSResponseHttpBinding">
+      <soap:address location="http://k10-fico-wps.vtb24.ru:9080/ru.neoflex.vtb24.proxyserviceWeb/sca/CheckApplicantForComplianceOMReqACSResponseExport"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

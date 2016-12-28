@@ -1,0 +1,48 @@
+<wsdl:definitions xmlns:bons0="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary" xmlns:tns="http://omentrylibrary/com/om" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CheckApplicantForComplianceOMReqACS" targetNamespace="http://omentrylibrary/com/om">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://omentrylibrary/com/om">
+			<xsd:import namespace="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary" schemaLocation="../../../../../ApplicationObjectLibrary/OM/schemas/OMENTRY/InvokeRequestParameters.xsd"/>
+			<xsd:import namespace="http://com.fairisaac.dms.fiom.apm.workflow.omentrylibrary" schemaLocation="../../../../../ApplicationObjectLibrary/OM/schemas/OMENTRY/InvokeResponseParameters.xsd"/>
+			<xsd:element name="invokePH3">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="params" nillable="true" type="bons0:InvokeRequestParameters"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="invokePH3Response">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="params" nillable="true" type="bons0:InvokeResponseParameters"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="invokePH3RequestMsg">
+		<wsdl:part element="tns:invokePH3" name="invokePH3Parameters"/>
+	</wsdl:message>
+	<wsdl:portType name="CheckApplicantForComplianceOMReqACS">
+		<wsdl:operation name="CheckApplicantForCompliance">
+			<wsdl:input message="tns:invokePH3RequestMsg" name="invokePH3Request"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="CancelCheckApplicantForComplianceOMReqACS">
+		<wsdl:operation name="CancelCheckApplicantForCompliance">
+			<wsdl:input message="tns:invokePH3RequestMsg" name="invokePH3Request"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:message name="invokePH3ResponseRequestMsg">
+		<wsdl:part element="tns:invokePH3Response" name="invokePH3ResponseParameters"/>
+	</wsdl:message>
+	<wsdl:portType name="CheckApplicantForComplianceOMReqACSResponse">
+		<wsdl:operation name="CheckApplicantForCompliance">
+			<wsdl:input message="tns:invokePH3ResponseRequestMsg" name="invokePH3Response"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="CancelCheckApplicantForComplianceOMReqACSResponse">
+		<wsdl:operation name="CancelCheckApplicantForCompliance">
+			<wsdl:input message="tns:invokePH3ResponseRequestMsg" name="invokePH3Response"/>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>

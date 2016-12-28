@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BCS_service">
+    <output-path>$PROJECT_DIR$/out/artifacts/BCS_service</output-path>
+    <root id="archive" name="BCS_service.war">
+      <element id="javaee-facet-resources" facet="BCS_service/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="BCS_service" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="eclipselink" />
+          <element id="library" level="project" name="FastInoset" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

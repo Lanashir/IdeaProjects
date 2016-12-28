@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Monitoring launcher:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Monitoring_launcher_jar</output-path>
+    <root id="archive" name="Monitoring launcher.jar">
+      <element id="module-output" name="Monitoring launcher" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/jsch-0.1.54.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,39 @@
+<cr:APMApplication xmlns:ns9="http://fairisaac.com/dms/fiom/entity/creditapplication" xmlns:cr="http://fairisaac.com/dms/fiom/entity/creditapplication">
+    <creditApplication>
+        <creditRequest>
+            <extension1String>${APPID}</extension1String>
+            <extension2String>${ext2Str}</extension2String>
+        </creditRequest>
+        <extension1String>${ext3Str}</extension1String>
+    </creditApplication>
+    <interfaceData>
+        <applicationData>
+            <applicationExtension>
+                <vtbApplicationData>
+                    <bcs>
+                        <bcsResponse>
+                            <sdrResults>
+                                <sbActualLevel>1</sbActualLevel>
+                                <sbCheckLog/>
+                                <sbCode/>
+                                <sbCodeGroup/>
+                                <sbDecisionStage>1</sbDecisionStage>
+                                ${tag}
+                                <sbComment>Ответ сформирован автоматически</sbComment>
+                                <sbOnSiteDecision>01</sbOnSiteDecision>
+                            </sdrResults>
+                            <sdrChecks>
+                                <outCheckReason/>
+                                <outChecker/>
+                                <outCheckBox/>
+                                <outCheck/>
+                                <commentRisk>http://dev-globex:5353/Inquiry.aspx?id=2072138</commentRisk>
+                                <operatorID>EXP</operatorID>
+                            </sdrChecks>
+                        </bcsResponse>
+                    </bcs>
+                </vtbApplicationData>
+            </applicationExtension>
+        </applicationData>
+    </interfaceData>
+</cr:APMApplication>
